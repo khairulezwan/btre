@@ -1,5 +1,5 @@
-from django.urls import path #
-from . import views #
+from django.urls import path #IMPORT THIS
+from . import views #IMPORT THIS
 
 #add url patterns
 urlpatterns = [

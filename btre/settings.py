@@ -29,8 +29,10 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+#AFTER STARTAPP puts is here
 INSTALLED_APPS = [
+    'listings.apps.ListingsConfig',
+    'realtors.apps.RealtorsConfig',
     'pages.apps.PagesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -52,6 +54,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'btre.urls'
 
+#INSERT YOUR OWN TEMPLATES os.path.join
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -119,7 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 
-#add root & DIR
+#STATIC_ROOT and STATICFILES_DIRS
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
