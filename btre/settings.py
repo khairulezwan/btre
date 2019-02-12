@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-#AFTER STARTAPP puts is here
+# AFTER STARTAPP puts is here
 INSTALLED_APPS = [
     'listings.apps.ListingsConfig',
     'realtors.apps.RealtorsConfig',
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
@@ -54,11 +55,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'btre.urls'
 
-#INSERT YOUR OWN TEMPLATES os.path.join
+# INSERT YOUR OWN TEMPLATES os.path.join
+# insert templates here
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')], #insert templates here
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,17 +78,15 @@ WSGI_APPLICATION = 'btre.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
-
-#insert you own datbase here
+# insert you own datbase here
 # ENIGNE, NAME, USER, PASSWORD and HOST 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'btredb',
-        'USER' : 'postgres',
-        'PASSWORD' : 'Gibson1991',
-        'HOST' : 'localhost'
+        'USER': 'postgres',
+        'PASSWORD': 'Gibson1991',
+        'HOST': 'localhost'
     }
 }
 
@@ -128,7 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 
-#STATIC_ROOT and STATICFILES_DIRS
+# STATIC_ROOT and STATICFILES_DIRS
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
