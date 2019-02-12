@@ -77,6 +77,9 @@ WSGI_APPLICATION = 'btre.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+
+#insert you own datbase here
+# ENIGNE, NAME, USER, PASSWORD and HOST 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
