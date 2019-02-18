@@ -1,8 +1,8 @@
-from django.urls import path #IMPORT THIS
-from . import views #IMPORT THIS
+from django.urls import path  # IMPORT THIS
+from . import views  # IMPORT THIS
 
-#add url patterns
+# add url patterns
 urlpatterns = [
-    path('',views.index, name='index'),
-    path('about',views.about, name='about'),
+    path('', views.index, name='index'),
+    path('about', views.about, name='about'),
 ]
